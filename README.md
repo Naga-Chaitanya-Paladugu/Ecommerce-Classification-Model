@@ -1,6 +1,8 @@
 # E-Commerce Customer Segmentation
 
-### I am working on this e-commerce project by applying the ML coursework that I am taking in this semester. Great Learning! This is still on building stage and many more changes and improvements need to be made as I learn more.
+### I am working on this e-commerce project by applying the ML coursework that I am taking in this semester. Great Learning! This is still on building stage and many more changes and improvements need to be made as I learn more. Here is the link to detailed version of this project: https://naga-chaitanya-paladugu.github.io/Ecommerce-Classification-Model/. 
+
+### Below is the preview and summary of project's main details. 
 ## Project Overview
 This project aims to analyze the purchasing behavior of 9,506 online clients for a major American retailer, Vanguard, over the past 12 months. The goal is to develop a robust segmentation model to enhance strategic decisions for the retailer’s online presence.
 
