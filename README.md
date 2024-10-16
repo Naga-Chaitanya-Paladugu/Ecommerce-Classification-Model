@@ -1,87 +1,64 @@
 # E-Commerce Customer Segmentation
 
-### I am working on this e-commerce project by applying the ML coursework that I am taking in this semester. Great Learning! This is still on building stage and many more changes and improvements need to be made as I learn more. Here is the link to detailed version of this project: https://naga-chaitanya-paladugu.github.io/Ecommerce-Classification-Model/. 
+ I worked on this project using a proprietary dataset from a retail company, provided as part of my fully online "Advanced Analytics" coursework at university. Here, I made an initial dive into numerous stages of the machine learning modeling pipeline, including in-depth data preprocessing, feature engineering, a variety of ML models, hyperparameter tuning, and many more. Additionally, I researched and incorporated various use cases demonstrating how businesses can benefit from implementing this Customer Segmentation Model. Overall, this experience not only taught me substantial technical skills but also demonstrated my ability to independently learn and implement complex concepts in a virtual setting, all within just 8 weeks!
 
-### Below is the preview and summary of project's main details. 
-## Project Overview
-This project aims to analyze the purchasing behavior of 9,506 online clients for a major American retailer, Vanguard, over the past 12 months. The goal is to develop a robust segmentation model to enhance strategic decisions for the retailer’s online presence.
+Here is the link to **full detailed report** of this project: https://naga-chaitanya-paladugu.github.io/Ecommerce-Classification-Model/. 
 
+ Below is a **quick summary** of project's main details. 
+## Overview
+This project focuses on analyzing the purchasing behavior of 9,506 online clients for a major American retailer, Vanguard, over the past 12 months. The goal is to build a robust classification model to segment customers into ‘Core’ (regular tier) and ‘Up’ (premium tier) categories, with a priority on making as many predictions on ‘Up’ customers as possible due to their higher revenue generation and importance to the business. This segmentation can help in strategic decision-making for marketing and sales.
 ## Dataset
-- **Source**: Proprietary dataset from Vanguard
+- **Source**: Proprietary dataset of a retail company shared by SLU.
 - **Size**: 9,504 observations, 16 variables
 - **Key Variables**:
   - **Demographic Details**: Gender, marital status, age
   - **Purchasing Behavior**: Cumulative sales, frequency, average ticket, recency, consistency
-  - **Customer Segmentation**: Segment 1, loyalty group, price group, segment 2
+  - **Customer Segmentation**: Segment 1 (Core or Up), loyalty group, price group, segment 2
   - **Other**: Most used platform
-
-## Objective
-To develop a segmentation model with 'Segment 1' as the target variable, using demographic details and purchasing behavior data.
 
 ## Methodology
 1. **Data Preprocessing**:
    - Handled missing values
    - Dropped redundant columns (Client ID, Birth Date)
    - Renamed columns for clarity
-   - Imputed missing values in the Age column
-   - Removed outliers from numerical columns
+   - Used Median Imputation in more than 10% of missing values in the Age column.
+   - Removed outliers from numerical column.
 
 2. **Exploratory Data Analysis (EDA)**:
    - Analyzed distributions and relationships of key variables
    - Visualized data using histograms, box plots, and bar plots
    - Identified and handled outliers
+   - Identified multi-collinearity among features.
 
 3. **Feature Engineering**:
    - One-hot encoded categorical variables
    - Scaled numerical features using standardization
 
 4. **Model Building**:
-   - Implemented and evaluated multiple models:
-     - **Logistic Regression**: Baseline and Lasso regularization
-     - **Random Forest**: Baseline and optimized with hyperparameter tuning
-     - **Gradient Boosting**: Baseline and optimized with hyperparameter tuning
-     - **Support Vector Machine (SVM)**: Evaluated different kernels and optimized with hyperparameter tuning
-
+   - Parametric Models
+      1. Logistic Regression - Baseline model with L1 regularization (Lasso). Tuned using cross-validation to find the optimal regularization parameter.
+   - Non-Parametric Models
+     1. Random Forest - Tuned for the number of trees and maximum depth.
+     2. Gradient Boosting - Tuned for the number of boosting stages and maximum depth.
+     3. Support Vector Machine (SVM) - Evaluated with different kernels and tuned for the best C value.
+     4. Neural Networks - Tuned for the number of layers and neurons using a subset of the data.
 5. **Model Evaluation**:
    - Performed 10-fold cross-validation
    - Compared models using accuracy, precision, recall, F1 score, and confusion matrices
 
-## Key Findings
-- **Significant Predictors**: Cumulative sales, average ticket, loyalty group, most used platform
-- **Model Performance**:
-  - **Logistic Regression (Lasso)**:
-    - Accuracy: 61.6%
-    - Precision: 62.1%
-    - Recall: 92.1%
-    - F1 Score: 74.2%
-  - **Random Forest**:
-    - Accuracy: 63.9%
-    - Precision: 63.7%
-    - Recall: 91.2%
-    - F1 Score: 75.0%
-  - **Gradient Boosting**:
-    - Accuracy: 64.8%
-    - Precision: 62.9%
-    - Recall: 99.3%
-    - F1 Score: 77.0%
-  - **Support Vector Machine (SVM)**:
-    - Accuracy: 62.0%
-    - Precision: 62.4%
-    - Recall: 90.3%
-    - F1 Score: 73.8%
+## Results
+- **Gradient Boosting:** Achieved the highest recall (98.10%) and F1-score (76.03%), making it the best model for identifying ‘Up’ customers.
+- **Random Forest:** Balanced performance with good precision (63.00%) and recall (94.07%).
+- **SVM:** Moderate performance with a recall of 93.74% and F1-score of 75.06%.
+- **Lasso Regression:** Simpler model with a recall of 92.84% and F1-score of 73.61%.
+- **Neural Networks:** Lower performance with a recall of 71.48% and F1-score of 67.09%.
 
 ## Conclusions
-- **Predictive Power**: Cumulative sales and average ticket are strong predictors of customer segments
-- **Model Performance**: Gradient Boosting achieved the highest accuracy, but Random Forest provided a better balance of metrics
-- **Implications**: The model can help Vanguard identify customer segments and tailor marketing strategies accordingly
-
+- **Best Model:** Gradient Boosting is the top-performing model, effectively capturing the complex, non-linear relationships in the data due to its high recall and F1-score. However, Random Forest is the best choice for time-sensitive applications due to its faster training and prediction times, while still offering similar performance.
+- **Feature Importance:** Key predictors include cumulative sales, loyalty group, average ticket, and consistency. Features like marital status and price group were less important and can be dropped to simplify the model, making it more interpretable without losing significant predictive power.
+- **Business Impact:** The model identifies high-value ‘Up’ customers, enabling targeted marketing and personalized offers to maximize revenue. Leveraging top features like cumulative sales and loyalty group can enhance customer engagement and retention through strategic marketing initiatives.
 ## Future Work
-- Explore additional features and interactions
-- Implement more advanced hyperparameter tuning
-- Investigate the impact of external factors on customer behavior
-
-## References
-- Graff, V. (2023). Dimension Reduction: Facing the Curse of Dimensionality. Medium.
-- Johnson, Ott, & Dogucu (2021). Bayes Rules! An Introduction to Applied Bayesian Modeling.
-- Mudigonda, S. (2024). Video lecture on Multivariate Normal Models. Saint Louis University.
+- Conduct PCA and cluster analysis for dimensionality reduction and improved interpretability.
+- Fine-tune classification thresholds to balance true positives and true negatives.
+- Perform comprehensive hyperparameter tuning, explore additional features and interactions to enhance model performance.
 
