@@ -2,7 +2,7 @@
 ## Personal Note
  I worked on this project using a proprietary dataset from a retail company, provided as part of my fully online "Advanced Analytics" coursework at university. Here, I made an initial dive into numerous stages of the machine learning modeling pipeline, including in-depth data preprocessing, feature engineering, a variety of ML models, hyperparameter tuning, and many more. Additionally, I researched and incorporated various use cases demonstrating how businesses can benefit from implementing this Customer Segmentation Model. Overall, this experience not only taught me substantial technical skills but also demonstrated my ability to independently learn and implement complex concepts in a virtual setting, all within just 8 weeks!
 
-Here is the link to **full detailed report** of this project: https://naga-chaitanya-paladugu.github.io/Ecommerce-Classification-Model/. 
+Here is the link to **full detailed report** of this project: https://naga-chaitanya-paladugu.github.io/Ecommerce-Classification-Model/. I recommend downloading the notebook file and, open it in Jupyter Notebook, navigating to 'View' > 'Table of Contents' on the top ribbon to easily explore the contents of the file.
 
  Below is a **quick summary** of project's main details. 
 ## Overview
