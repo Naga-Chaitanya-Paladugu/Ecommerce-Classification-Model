@@ -2,9 +2,11 @@
 ## Personal Note
  I worked on this project using a proprietary dataset from a retail company, provided as part of my fully online "Advanced Analytics" coursework at university. Here, I made an initial dive into numerous stages of the machine learning modeling pipeline, including in-depth data preprocessing, feature engineering, a variety of ML models, hyperparameter tuning, and many more. Additionally, I researched and incorporated various use cases demonstrating how businesses can benefit from implementing this Customer Segmentation Model. Overall, this experience not only taught me substantial technical skills but also demonstrated my ability to independently learn and implement complex concepts in a virtual setting, all within just 8 weeks!
 
-Here is the link to **full detailed report** of this project: https://naga-chaitanya-paladugu.github.io/Ecommerce-Classification-Model/. I recommend downloading the notebook file and, open it in Jupyter Notebook, navigating to 'View' > 'Table of Contents' on the top ribbon to easily explore the contents of the file.
+Here is the link to **full detailed report** of this project: https://naga-chaitanya-paladugu.github.io/Ecommerce-Classification-Model/. I recommend downloading the notebook file and, open it in Jupyter Notebook, navigating to 'View' > 'Table of Contents' on the top ribbon to easily explore the contents of the file. 
 
- Below is a **quick summary** of project's main details. 
+Here is the link to the video presentation that provides an overview of the project and its business relevance: https://youtu.be/9LtZGq0AWeE
+
+Below is a **quick summary** of project's main details. 
 ## Overview
 This project focuses on analyzing the purchasing behavior of 9,506 online clients for a major American retailer, Vanguard, over the past 12 months. The goal is to build a robust classification model to segment customers into ‘Core’ (regular tier) and ‘Up’ (premium tier) categories, with a priority on making as many predictions on ‘Up’ customers as possible due to their higher revenue generation and importance to the business. This segmentation can help in strategic decision-making for marketing and sales.
 ## Dataset
